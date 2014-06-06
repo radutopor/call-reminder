@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bkg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/header_bar" />
+
+    <FrameLayout
+        android:id="@+id/lay_reminders_controls"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="15dp"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:paddingTop="15dp" >
+
+                <Button
+                    android:id="@+id/btn_add_reminder"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="17.9dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_blue"
+                    android:text="@string/add_reminder"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <ToggleButton
+                    android:id="@+id/btn_delete_reminder"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_red"
+                    android:textColor="@color/dark_gray"
+                    android:textOff="@string/delete_reminder"
+                    android:textOn="@string/done_deleting"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/separator_bkg"
+                android:gravity="center_vertical"
+                android:paddingBottom="3dp"
+                android:paddingLeft="8dp"
+                android:text="@string/current_reminders"
+                android:textColor="@color/dark_gray"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <ListView
+                android:id="@+id/lv_reminders"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="@android:color/transparent"
+                android:divider="@android:color/transparent"
+                android:listSelector="@drawable/list_selector"
+                android:paddingLeft="4dp"
+                android:paddingRight="8dp" />
+        </LinearLayout>
+
+        <SlidingDrawer
+            android:id="@+id/drawer_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:content="@+id/drawer_options_content_wrapper"
+            android:handle="@+id/drawer_options_handle"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:id="@+id/drawer_options_handle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bkg_drawer_options" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/btn_options" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/drawer_options_content_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:id="@+id/drawer_options_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/dark_blue"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="4.6dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="10dp" >
+
+                    <ToggleButton
+                        android:id="@+id/btn_toggle_enabled"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_yellow"
+                        android:textColor="@color/dark_gray"
+                        android:textOff="@string/edit_enabled"
+                        android:textOn="@string/done_editing"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <ToggleButton
+                        android:id="@+id/btn_disable_enable_all"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_yellow"
+                        android:textColor="@color/dark_gray"
+                        android:textOff="@string/disable_all"
+                        android:textOn="@string/enable_all"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btn_clear_list"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_yellow"
+                        android:text="@string/clear_list"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </FrameLayout>
+        </SlidingDrawer>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/txt_add_reminder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/tap_field_big"
+        android:gravity="center"
+        android:paddingBottom="25dp"
+        android:text="@string/tap_to_add_a_reminder"
+        android:textColor="@drawable/txt_white"
+        android:textSize="21dp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+</LinearLayout>
