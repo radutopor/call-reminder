@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/note_bkg_yellow" >
+
+    <TextView
+        android:id="@+id/txt_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="25dp"
+        android:ellipsize="end"
+        android:lineSpacingExtra="-1dp"
+        android:maxLines="2"
+        android:text="Birthday party"
+        android:textColor="@color/dark_gray"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txt_contacts_names"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="13dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="13dp"
+        android:gravity="right"
+        android:singleLine="true"
+        android:text="John Doe"
+        android:textColor="@color/dark_gray"
+        android:textSize="12dp"
+        android:textStyle="bold|italic" />
+
+    <ImageView
+        android:id="@+id/img_enabled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|left"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/ic_check_on"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/img_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|left"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/ic_delete"
+        android:visibility="gone" />
+
+</FrameLayout>

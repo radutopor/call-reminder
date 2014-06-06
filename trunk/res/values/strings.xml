@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="call_reminder">Call Reminder</string>
+    <string name="tap_to_add_a_reminder">Tap to add a reminder</string>
+    <string name="add_reminder">Add reminder</string>
+    <string name="delete_reminder">Delete reminder</string>
+    <string name="done_deleting">Done deleting</string>
+    <string name="current_reminders">Current reminders</string>
+    <string name="edit_enabled">Edit enabled</string>
+    <string name="done_editing">Done editing</string>
+    <string name="disable_all">Disable all</string>
+    <string name="disable_all_reminders">Disable all reminders?</string>
+    <string name="enable_all">Enable all</string>
+    <string name="clear_list">Clear list</string>
+    <string name="clear_the_reminder_list">Clear the reminder list?</string>
+    <string name="add_contact">Add contact &#160;</string>
+    <string name="message">Message</string>
+    <string name="enabled">Enabled</string>
+    <string name="disabled">Disabled</string>
+    <string name="set_color">Set color</string>
+    <string name="reminder_color">Reminder color</string>
+    <string name="starting_from">Starting from…</string>
+    <string name="remove">Remove</string>
+    <string name="cancel">Cancel</string>
+    <string name="save_reminder">Save reminder</string>
+	<string name="delete">Delete</string>
+    <string name="save">Save</string>
+    <string name="delete_this_reminder">Delete this reminder?</string>
+    <string name="no_contacts">Please add at least one contact.</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="ok">Ok</string>
+    <string name="notification_message_call_start">Don\'t forget to tell `:</string>
+    <string name="notification_message_call_end">What do you want to do with this reminder?</string>
+    <string name="edit">Edit</string>
+    <string name="keep">Keep</string>
+    <string name="done">Done</string>
+    <string name="reminder_deleted">Reminder deleted</string>
+    <string name="reminder_edited">Reminder edited</string>
+
+</resources>

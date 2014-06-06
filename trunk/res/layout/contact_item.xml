@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp" >
+
+    <Button
+        android:id="@+id/btn_contact_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_blue"
+        android:drawablePadding="5dp"
+        android:drawableRight="@drawable/ic_delete"
+        android:padding="10dp"
+        android:text="Jessica Alba"
+        android:textColor="@color/dark_gray"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+</FrameLayout>
