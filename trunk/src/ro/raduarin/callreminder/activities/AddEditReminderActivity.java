@@ -170,6 +170,7 @@ public class AddEditReminderActivity extends BaseActivity
 						public void onClick(View colorButton)
 						{
 							reminder.color = ReminderColor.getButtonColor(colorButton);
+							edt_message.setBackgroundResource(reminder.color.noteResId);
 							btn_color.setBackgroundResource(reminder.color.iconResId);
 							iconPicker.dismiss();
 						}
