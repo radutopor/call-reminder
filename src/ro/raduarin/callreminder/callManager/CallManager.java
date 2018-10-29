@@ -16,25 +16,25 @@ import android.os.Handler;
 public class CallManager
 {
 	private static Intent notificationIntent;
-	private static boolean releventCallReceived; 
+	private static boolean relevantCallReceived; 
 	
 	public static void onNewCall(final Context context, String phoneNumber)
 	{
 		final Contact contact = new ContactsQuery(context).getContactByPhoneNo(phoneNumber);
 		
-		final ArrayList<Reminder> releventReminders = new ArrayList<Reminder>();
+		final ArrayList<Reminder> relevantReminders = new ArrayList<Reminder>();
 		Calendar now = Calendar.getInstance();
 		for (Reminder reminder : new Dao(context).getAllReminders())
 			if (reminder.isEnabled && (reminder.startDate==null||reminder.startDate.compareTo(now)<0) && reminder.contactIds.contains(contact.id))
-				releventReminders.add(reminder);
+				relevantReminders.add(reminder);
 		
 		notificationIntent = null;
-		if (!releventReminders.isEmpty())
+		if (!relevantReminders.isEmpty())
 			new Handler().postDelayed(new Runnable(){ public void run()
 			{
 				notificationIntent = new Intent(context, NotificationActivity.class)
 					.putExtra(NotificationActivity.KEY_CONTACT, contact)
-					.putExtra(NotificationActivity.KEY_REMINDERS, releventReminders)
+					.putExtra(NotificationActivity.KEY_REMINDERS, relevantReminders)
 					.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 				
 				context.startActivity(notificationIntent);				
@@ -43,15 +43,15 @@ public class CallManager
 	
 	public static void onCallReceived()
 	{
-		releventCallReceived = notificationIntent != null;
+		relevantCallReceived = notificationIntent != null;
 	}
 	
 	public static void onCallEnd(final Context context)
 	{
-		if (releventCallReceived)
+		if (relevantCallReceived)
 			new Handler().postDelayed(new Runnable(){ public void run() {
 				context.startActivity(notificationIntent.setClass(context, NotificationCallEndActivity.class));
 			}}, 100);
-		releventCallReceived = false;
+		relevantCallReceived = false;
 	}
 }
